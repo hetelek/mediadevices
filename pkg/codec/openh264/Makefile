@@ -7,6 +7,8 @@ lib_prefix := libopenh264
 src_dir := $(src_root_dir)/$(MEDIADEVICES_TARGET_PLATFORM)
 output_path := $(lib_dir)/$(lib_prefix)-$(MEDIADEVICES_TARGET_PLATFORM).a
 
+# MEDIADEVICES_TARGET_ARCH=arm64 MEDIADEVICES_TARGET_PLATFORM=darwin-arm MEDIADEVICES_TARGET_OS=darwin make
+
 # OS and Arch mapping to OpenH264 parameters
 ifeq (windows,$(MEDIADEVICES_TARGET_OS))
 	os := mingw_nt
