@@ -236,6 +236,7 @@ STATUS AVBindSessionFree(PAVBindSession *ppSession) {
     CHK(ppSession != NULL, STATUS_NULL_ARG);
     PAVBindSession pSession = *ppSession;
     if (pSession->refCaptureSession != NULL) {
+        [pSession->refCaptureSession stopRunning];
         [pSession->refCaptureSession release];
         pSession->refCaptureSession = NULL;
     }
